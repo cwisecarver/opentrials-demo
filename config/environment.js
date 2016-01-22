@@ -2,6 +2,18 @@
 
 module.exports = function(environment) {
   var ENV = {
+    jamdbURL: 'http://localhost:1212',
+    auth: {
+      self: {
+        defaultNamespace: 'OPENTRIALS',
+        defaultCollection: 'users',
+      },
+      // osf: {
+      //     clientId: 'db1ff76b6001460c884c33b74b2784f8',
+      //     scope: 'osf.users.all_read',
+      //     url: 'https://staging-accounts.osf.io',
+      // },
+    },
     modulePrefix: 'opentrials',
     environment: environment,
     baseURL: '/',
@@ -12,7 +24,9 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    'ember-simple-auth': {
+        authenticationRoute: 'login'
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
