@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ENV from 'toast/config/environment';
+import ENV from 'opentrials/config/environment';
 import Base from 'ember-simple-auth/authenticators/base';
 
 const { $, RSVP } = Ember;

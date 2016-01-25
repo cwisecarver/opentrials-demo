@@ -1,0 +1,21 @@
+<section class="content">
+
+  <form class="form-inline">
+    <div class="form-group">
+      <label class="control-label">Login with</label>
+      <select class="form-control" onchange={{action "selectAuthMethod" value="target.value"}}>
+        {{#each authDrivers as |driver|}}
+          <option value={{driver}}>{{driver}}</option>
+        {{/each}}
+      </select>
+
+    </div>
+  </form>
+
+  <hr>
+
+  {{component driver login=(action 'authenticate')}}
+
+</section>
+
+{{outlet}}

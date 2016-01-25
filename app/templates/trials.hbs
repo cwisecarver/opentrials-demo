@@ -1,1 +1,64 @@
 {{outlet}}
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Data Ref
+      </th>
+      <th>
+        Created By
+      </th>
+      <th>
+        Created On
+      </th>
+      <th>
+        Modified On
+      </th>
+      <th>
+        Log Ref
+      </th>
+      <th>
+        Trial Data
+      </th>
+      <th>
+        Ref
+      </th>
+      <th>
+        Modified By
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |thing|}}
+    <tr>
+      <td>
+        {{ thing }}
+        {{ this.id }}
+        {{ this.dataRef }}
+      </td>
+      <td>
+        {{ this.createdBy }}
+      </td>
+      <td>
+        {{ this.createdOn }}
+      </td>
+      <td>
+        {{ this.modifiedOn }}
+      </td>
+      <td>
+        {{ this.logRef }}
+      </td>
+      <td>
+        {{ this.thisData }}
+      </td>
+      <td>
+        {{ this.ref }}
+      </td>
+      <td>
+        {{ this.modifiedBy }}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
