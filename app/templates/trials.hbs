@@ -1,10 +1,8 @@
-{{outlet}}
-
 <table>
   <thead>
     <tr>
       <th>
-        Data Ref
+        Brief Title
       </th>
       <th>
         Created By
@@ -13,7 +11,7 @@
         Created On
       </th>
       <th>
-        Modified On
+        Country
       </th>
       <th>
         Log Ref
@@ -30,35 +28,45 @@
     </tr>
   </thead>
   <tbody>
-    {{#each model as |thing|}}
+    {{#each model as |trial|}}
     <tr>
       <td>
-        {{ thing }}
-        {{ this.id }}
-        {{ this.dataRef }}
+        {{ trial.attributes.brief_title }}
       </td>
       <td>
-        {{ this.createdBy }}
+        {{ trial.attributes.brief_summary }}
       </td>
       <td>
-        {{ this.createdOn }}
+        <ul>
+          {{#each trial.attributes.conditions as |condition|}}
+          <li>{{ condition}}</li>
+          {{/each}}
+        </ul>
       </td>
       <td>
-        {{ this.modifiedOn }}
+        <ul>
+          {{#each trial.attributes.location_countries as |country|}}
+            <li>
+              {{ country }}
+            </li>
+          {{/each}}
+        </ul>
       </td>
       <td>
-        {{ this.logRef }}
+        {{ trial.logRef }}
       </td>
       <td>
-        {{ this.thisData }}
+        {{ trial.thingData }}
       </td>
       <td>
-        {{ this.ref }}
+        {{ trial.ref }}
       </td>
       <td>
-        {{ this.modifiedBy }}
+        {{ trial.modifiedBy }}
       </td>
     </tr>
     {{/each}}
   </tbody>
 </table>
+
+{{outlet}}

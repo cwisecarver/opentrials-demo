@@ -7,6 +7,6 @@ export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
     namespace: 'v2',
     host: ENV.jamdbURL,
     pathForType: function() {
-      return `collections/OPENTRIALS.data/_search`;
+      return 'collections/OPENTRIALS.data/_search';
     }
 });
