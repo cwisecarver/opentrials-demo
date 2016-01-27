@@ -1,69 +1,138 @@
+<style>
+  table tr td.truncate p {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+
 <table>
   <thead>
     <tr>
-      <th>
-        Brief Title
-      </th>
-      <th>
-        Created By
-      </th>
-      <th>
-        Created On
-      </th>
-      <th>
-        Country
-      </th>
-      <th>
-        Log Ref
-      </th>
-      <th>
-        Trial Data
-      </th>
-      <th>
-        Ref
-      </th>
-      <th>
-        Modified By
-      </th>
+      <th>acronym</th>
+      <th>armGroups</th>
+      <th>biospecDescr</th>
+      <th>biospecRetention</th>
+      <th>briefSummary</th>
+      <th>briefTitle</th>
+      <th>clinicalResults</th>
+      <th>completionDateActual</th>
+      <th>completionDateAnticipated</th>
+      <th>conditionBrowse</th>
+      <th>conditions</th>
+      <th>detailedDescription</th>
+      <th>downloadDate</th>
+      <th>eligibility</th>
+      <th>enrollmentActual</th>
+      <th>enrollmentAnticipated</th>
+      <th>firstreceivedDate</th>
+      <th>hasExpandedAccess</th>
+      <th>interventionBrowse</th>
+      <th>interventions</th>
+      <th>isFdaRegulated</th>
+      <th>isSection801</th>
+      <th>keywords</th>
+      <th>lastchangedDate</th>
+      <th>links</th>
+      <th>linkText</th>
+      <th>locationCountries</th>
+      <th>locations</th>
+      <th>nctAliases</th>
+      <th>nctId</th>
+      <th>numberOfArms</th>
+      <th>numberOfGroups</th>
+      <th>officialTitle</th>
+      <th>orgStudyId</th>
+      <th>otherOutcomes</th>
+      <th>overallContact</th>
+      <th>overallContactBackup</th>
+      <th>overallOfficials</th>
+      <th>overallStatus</th>
+      <th>oversightInfo</th>
+      <th>phase</th>
+      <th>primaryCompletionDateActual</th>
+      <th>primaryCompletionDateAnticipated</th>
+      <th>primaryOutcomes</th>
+      <th>references</th>
+      <th>removedCountries</th>
+      <th>responsibleParty</th>
+      <th>resultsReferences</th>
+      <th>secondaryIds</th>
+      <th>secondaryOutcomes</th>
+      <th>source</th>
+      <th>sponsors</th>
+      <th>startDate</th>
+      <th>studyDesign</th>
+      <th>studyType</th>
+      <th>targetDuration</th>
+      <th>url</th>
+      <th>verificationDate</th>
+      <th>whyStopped</th>
     </tr>
   </thead>
   <tbody>
     {{#each model as |trial|}}
     <tr>
-      <td>
-        {{ trial.attributes.brief_title }}
-      </td>
-      <td>
-        {{ trial.attributes.brief_summary }}
-      </td>
-      <td>
-        <ul>
-          {{#each trial.attributes.conditions as |condition|}}
-          <li>{{ condition}}</li>
-          {{/each}}
-        </ul>
-      </td>
-      <td>
-        <ul>
-          {{#each trial.attributes.location_countries as |country|}}
-            <li>
-              {{ country }}
-            </li>
-          {{/each}}
-        </ul>
-      </td>
-      <td>
-        {{ trial.logRef }}
-      </td>
-      <td>
-        {{ trial.thingData }}
-      </td>
-      <td>
-        {{ trial.ref }}
-      </td>
-      <td>
-        {{ trial.modifiedBy }}
-      </td>
+      <td><p>{{trial.acronym}}</p></td>
+      <td><p>{{trial.armGroups}}</p></td>
+      <td><p>{{trial.biospecDescr}}</p></td>
+      <td><p>{{trial.biospecRetention}}</p></td>
+      <td class="truncate"><p>{{trial.briefSummary}}</p></td>
+      <td><p>{{trial.briefTitle}}</p></td>
+      <td class="truncate"><p>{{trial.clinicalResults}}</p></td>
+      <td><p>{{trial.completionDateActual}}</p></td>
+      <td><p>{{trial.completionDateAnticipated}}</p></td>
+      <td><p>{{trial.conditionBrowse}}</p></td>
+      <td><p>{{trial.conditions}}</p></td>
+      <td class="truncate"><p>{{trial.detailedDescription}}</p></td>
+      <td><p>{{trial.downloadDate}}</p></td>
+      <td><p>{{trial.eligibility}}</p></td>
+      <td><p>{{trial.enrollmentActual}}</p></td>
+      <td><p>{{trial.enrollmentAnticipated}}</p></td>
+      <td><p>{{trial.firstreceivedDate}}</p></td>
+      <td><p>{{trial.hasExpandedAccess}}</p></td>
+      <td><p>{{trial.interventionBrowse}}</p></td>
+      <td><p>{{trial.interventions}}</p></td>
+      <td><p>{{trial.isFdaRegulated}}</p></td>
+      <td><p>{{trial.isSection801}}</p></td>
+      <td><p>{{trial.keywords}}</p></td>
+      <td><p>{{trial.lastchangedDate}}</p></td>
+      <td><p>{{trial.links}}</p></td>
+      <td><p>{{trial.linkText}}</p></td>
+      <td><p>{{trial.locationCountries}}</p></td>
+      <td><p>{{trial.locations}}</p></td>
+      <td><p>{{trial.nctAliases}}</p></td>
+      <td><p>{{trial.nctId}}</p></td>
+      <td><p>{{trial.numberOfArms}}</p></td>
+      <td><p>{{trial.numberOfGroups}}</p></td>
+      <td><p>{{trial.officialTitle}}</p></td>
+      <td><p>{{trial.orgStudyId}}</p></td>
+      <td><p>{{trial.otherOutcomes}}</p></td>
+      <td><p>{{trial.overallContact}}</p></td>
+      <td><p>{{trial.overallContactBackup}}</p></td>
+      <td><p>{{trial.overallOfficials}}</p></td>
+      <td><p>{{trial.overallStatus}}</p></td>
+      <td><p>{{trial.oversightInfo}}</p></td>
+      <td><p>{{trial.phase}}</p></td>
+      <td><p>{{trial.primaryCompletionDateActual}}</p></td>
+      <td><p>{{trial.primaryCompletionDateAnticipated}}</p></td>
+      <td><p>{{trial.primaryOutcomes}}</p></td>
+      <td><p>{{trial.references}}</p></td>
+      <td><p>{{trial.removedCountries}}</p></td>
+      <td><p>{{trial.responsibleParty}}</p></td>
+      <td><p>{{trial.resultsReferences}}</p></td>
+      <td><p>{{trial.secondaryIds}}</p></td>
+      <td><p>{{trial.secondaryOutcomes}}</p></td>
+      <td><p>{{trial.source}}</p></td>
+      <td><p>{{trial.sponsors}}</p></td>
+      <td><p>{{trial.startDate}}</p></td>
+      <td><p>{{trial.studyDesign}}</p></td>
+      <td><p>{{trial.studyType}}</p></td>
+      <td><p>{{trial.targetDuration}}</p></td>
+      <td><p>{{trial.url}}</p></td>
+      <td><p>{{trial.verificationDate}}</p></td>
+      <td><p>{{trial.whyStopped}}</p></td>
     </tr>
     {{/each}}
   </tbody>

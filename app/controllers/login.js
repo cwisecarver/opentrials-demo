@@ -12,7 +12,8 @@ export default Ember.Controller.extend({
     },
     authenticate(attrs) {
       this.get('session').authenticate('authenticator:jam-jwt', attrs).then(() => {
-        this.set('model', this.store.findAll('trial'));
+        // this doesn't seem to need to be here
+        // this.set('model', this.store.findAll('document'));
       });
     }
   }

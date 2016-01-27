@@ -1,10 +1,9 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 //TODO override serialize as well
 export default DS.JSONAPISerializer.extend({
-  normalize(model, payload) {
-      payload.attributes = Object.assign({}, payload.meta, {attributes: payload.attributes});
-      delete payload.meta;
-    return this._super(model, payload);
+  keyForAttribute: function(attr) {
+    return Ember.String.underscore(attr);
   }
 });
