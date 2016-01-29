@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import ENV from 'opentrials/config/environment';
+import $ from 'jquery';
 
 export default Ember.Component.extend({
   namespace: ENV.auth.self.defaultNamespace,

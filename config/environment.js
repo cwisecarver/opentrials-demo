@@ -25,7 +25,7 @@ module.exports = function(environment) {
       }
     },
     'ember-simple-auth': {
-        authenticationRoute: 'login'
+      authenticationRoute: 'login',
     },
     APP: {
       // Here you can pass flags/options to your application instance

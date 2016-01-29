@@ -1,1 +1,13 @@
+{{#mdl-table content=model as |row|}}
+	{{#mdl-table-col label='Brief Title' class='wider mdl-data-table__cell--non-numeric'}}
+		<p>{{row.briefTitle}}</p>
+	{{/mdl-table-col}}
+	{{#mdl-table-col label='Brief Summary' class='wide mdl-data-table__cell--non-numeric'}}
+		<p>{{row.briefSummary}}</p>
+	{{/mdl-table-col}}
+  {{#mdl-table-col label='Keywords' class='thin mdl-data-table__cell--non-numeric'}}
+		<p>{{row.keywords}}</p>
+	{{/mdl-table-col}}
+{{/mdl-table}}
+
 {{outlet}}

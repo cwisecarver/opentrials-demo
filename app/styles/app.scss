@@ -1,0 +1,78 @@
+@import "_color-definitions";
+
+$color-primary: 4, 148, 189;
+$color-accent: 7, 201, 255;
+
+@import 'material-design-lite';
+
+.wide {
+  width: 100%;
+}
+
+.login-card-wide.mdl-card {
+  width: 512px;
+}
+.login-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('http://opentrials.net/wp-content/themes/opentrials/img/bg.jpg') center / cover;
+}
+.login-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+body {
+    height: 100%;
+    background-color: #FAFAFA;
+}
+
+.mdl-layout__content {
+  overflow-x: auto;
+}
+
+.curation-application {
+    background-color: #79D3F4;
+}
+
+.hide-overflow {
+  overflow-x: hidden;
+}
+
+.dark {
+  color: #757575;
+}
+
+div#preload {
+   position: absolute;
+   overflow: hidden;
+   left: -9999px;
+   top: -9999px;
+   height: 1px;
+   width: 1px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.mdl-data-table td, .mdl-data-table th {
+  text-align: left;
+}
+
+.mdl-data-table td.wide p, .mdl-data-table td.wider p, .mdl-data-table td.thin p {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.mdl-data-table td.wide p {
+  width: 300px;
+}
+
+.mdl-data-table td.wider p {
+  width: 350px;
+}
+.mdl-data-table td.thin p {
+  width: 150px;
+  overflow-x:auto;
+  text-overflow: inherit;
+}

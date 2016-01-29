@@ -1,20 +1,15 @@
-<form class="form-horizontal" submit={{action "authenticate"}}>
-<div class="form-group">
-  <div class="col-sm-6">
-    <label class="control-label">Namespace</label>
-    {{input value=namespace class="form-control" type="text"}}
-  </div>
-
-  <div class="col-sm-6">
-    <label class="control-label">Collection</label>
-    {{input value=collection class="form-control" type="text"}}
-  </div>
-</div>
-
-<label class="control-label">Username</label>
-{{input value=username class="form-control" type="text"}}
-<label class="control-label">Password</label>
-{{input value=password class="form-control" type="password"}}
-<br>
-<button {{action "authenticate"}} class="btn btn-primary bg-black" style="width: 100%">Login</button>
+<form class="form-horizontal" {{action "authenticate" on="submit"}}>
+  {{#mdl-card title='Welcome' class='login-card-wide mdl-shadow--2dp center'}}
+    <div class="mdl-card__supporting-text">
+      {{mdl-textfield value=namespace id='namespace' label='Namespace'}}
+      {{mdl-textfield value=collection id='collection' label='Collection'}}
+      {{mdl-textfield value=username id='username' label='Username'}}
+      {{mdl-textfield value=password id='password' label='Password' type='password'}}
+    </div>
+    {{#mdl-card-actions}}
+      {{#mdl-button action='authenticate'}}
+        Login
+      {{/mdl-button}}
+    {{/mdl-card-actions}}
+  {{/mdl-card}}
 </form>
