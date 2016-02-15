@@ -63,8 +63,15 @@
     </tr>
   </thead>
   <tbody>
-    {{#each model as |trial|}}
+    {{#each filteredTrials as |trial|}}
     <tr>
+      <td class="mdl-data-table__cell--non-numeric">
+            <ul>
+                  {{#each trial.keywords as |keyword|}}
+                        <li>{{#link-to "trials" (query-params keyword=keyword) }}{{keyword}}{{/link-to}}</li>
+                  {{/each}}
+            </ul>
+      </td>
       <td class="mdl-data-table__cell--non-numeric"><p>{{trial.acronym}}</p></td>
       <td class="mdl-data-table__cell--non-numeric"><p>{{trial.armGroups}}</p></td>
       <td class="mdl-data-table__cell--non-numeric"><p>{{trial.biospecDescr}}</p></td>
@@ -87,7 +94,7 @@
       <td class="mdl-data-table__cell--non-numeric"><p>{{trial.interventions}}</p></td>
       <td class="mdl-data-table__cell--non-numeric"><p>{{trial.isFdaRegulated}}</p></td>
       <td class="mdl-data-table__cell--non-numeric"><p>{{trial.isSection801}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.keywords}}</p></td>
+
       <td class="mdl-data-table__cell--non-numeric"><p>{{trial.lastchangedDate}}</p></td>
       <td class="mdl-data-table__cell--non-numeric"><p>{{trial.links}}</p></td>
       <td class="mdl-data-table__cell--non-numeric"><p>{{trial.linkText}}</p></td>
