@@ -1,138 +1,52 @@
-<table class="mdl-data-table  mdl-js-data-table mdl-shadow--2dp">
-  <thead>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric">acronym</th>
-      <th class="mdl-data-table__cell--non-numeric">armGroups</th>
-      <th class="mdl-data-table__cell--non-numeric">biospecDescr</th>
-      <th class="mdl-data-table__cell--non-numeric">biospecRetention</th>
-      <th class="mdl-data-table__cell--non-numeric">briefSummary</th>
-      <th class="mdl-data-table__cell--non-numeric">briefTitle</th>
-      <th class="mdl-data-table__cell--non-numeric">clinicalResults</th>
-      <th class="mdl-data-table__cell--non-numeric">completionDateActual</th>
-      <th class="mdl-data-table__cell--non-numeric">completionDateAnticipated</th>
-      <th class="mdl-data-table__cell--non-numeric">conditionBrowse</th>
-      <th class="mdl-data-table__cell--non-numeric">conditions</th>
-      <th class="mdl-data-table__cell--non-numeric">detailedDescription</th>
-      <th class="mdl-data-table__cell--non-numeric">downloadDate</th>
-      <th class="mdl-data-table__cell--non-numeric">eligibility</th>
-      <th class="mdl-data-table__cell--non-numeric">enrollmentActual</th>
-      <th class="mdl-data-table__cell--non-numeric">enrollmentAnticipated</th>
-      <th class="mdl-data-table__cell--non-numeric">firstreceivedDate</th>
-      <th class="mdl-data-table__cell--non-numeric">hasExpandedAccess</th>
-      <th class="mdl-data-table__cell--non-numeric">interventionBrowse</th>
-      <th class="mdl-data-table__cell--non-numeric">interventions</th>
-      <th class="mdl-data-table__cell--non-numeric">isFdaRegulated</th>
-      <th class="mdl-data-table__cell--non-numeric">isSection801</th>
-      <th class="mdl-data-table__cell--non-numeric">keywords</th>
-      <th class="mdl-data-table__cell--non-numeric">lastchangedDate</th>
-      <th class="mdl-data-table__cell--non-numeric">links</th>
-      <th class="mdl-data-table__cell--non-numeric">linkText</th>
-      <th class="mdl-data-table__cell--non-numeric">locationCountries</th>
-      <th class="mdl-data-table__cell--non-numeric">locations</th>
-      <th class="mdl-data-table__cell--non-numeric">nctAliases</th>
-      <th class="mdl-data-table__cell--non-numeric">nctId</th>
-      <th>numberOfArms</th>
-      <th>numberOfGroups</th>
-      <th class="mdl-data-table__cell--non-numeric">officialTitle</th>
-      <th class="mdl-data-table__cell--non-numeric">orgStudyId</th>
-      <th class="mdl-data-table__cell--non-numeric">otherOutcomes</th>
-      <th class="mdl-data-table__cell--non-numeric">overallContact</th>
-      <th class="mdl-data-table__cell--non-numeric">overallContactBackup</th>
-      <th class="mdl-data-table__cell--non-numeric">overallOfficials</th>
-      <th class="mdl-data-table__cell--non-numeric">overallStatus</th>
-      <th class="mdl-data-table__cell--non-numeric">oversightInfo</th>
-      <th class="mdl-data-table__cell--non-numeric">phase</th>
-      <th class="mdl-data-table__cell--non-numeric">primaryCompletionDateActual</th>
-      <th class="mdl-data-table__cell--non-numeric">primaryCompletionDateAnticipated</th>
-      <th class="mdl-data-table__cell--non-numeric">primaryOutcomes</th>
-      <th class="mdl-data-table__cell--non-numeric">references</th>
-      <th class="mdl-data-table__cell--non-numeric">removedCountries</th>
-      <th class="mdl-data-table__cell--non-numeric">responsibleParty</th>
-      <th class="mdl-data-table__cell--non-numeric">resultsReferences</th>
-      <th class="mdl-data-table__cell--non-numeric">secondaryIds</th>
-      <th class="mdl-data-table__cell--non-numeric">secondaryOutcomes</th>
-      <th class="mdl-data-table__cell--non-numeric">source</th>
-      <th class="mdl-data-table__cell--non-numeric">sponsors</th>
-      <th class="mdl-data-table__cell--non-numeric">startDate</th>
-      <th class="mdl-data-table__cell--non-numeric">studyDesign</th>
-      <th class="mdl-data-table__cell--non-numeric">studyType</th>
-      <th class="mdl-data-table__cell--non-numeric">targetDuration</th>
-      <th class="mdl-data-table__cell--non-numeric">url</th>
-      <th class="mdl-data-table__cell--non-numeric">verificationDate</th>
-      <th class="mdl-data-table__cell--non-numeric">whyStopped</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each model as |trial|}}
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.acronym}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.armGroups}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.biospecDescr}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.biospecRetention}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.briefSummary}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.briefTitle}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.clinicalResults}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.completionDateActual}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.completionDateAnticipated}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.conditionBrowse}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.conditions}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.detailedDescription}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.downloadDate}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.eligibility}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.enrollmentActual}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.enrollmentAnticipated}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.firstreceivedDate}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.hasExpandedAccess}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.interventionBrowse}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.interventions}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.isFdaRegulated}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.isSection801}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric">
-	      <ul>
-	      	{{#each trial.keywords as |keyword|}}
-	      		<li>{{#link-to "trials.index" (query-params "filter[keywords]"=keyword) }}</li>
-	      	{{/each}}
-	      </ul>
-      </td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.lastchangedDate}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.links}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.linkText}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.locationCountries}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.locations}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.nctAliases}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.nctId}}</p></td>
-      <td><p>{{trial.numberOfArms}}</p></td>
-      <td><p>{{trial.numberOfGroups}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.officialTitle}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.orgStudyId}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.otherOutcomes}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.overallContact}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.overallContactBackup}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.overallOfficials}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.overallStatus}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.oversightInfo}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.phase}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.primaryCompletionDateActual}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.primaryCompletionDateAnticipated}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.primaryOutcomes}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.references}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.removedCountries}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.responsibleParty}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.resultsReferences}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.secondaryIds}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.secondaryOutcomes}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.source}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.sponsors}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.startDate}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.studyDesign}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.studyType}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.targetDuration}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.url}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.verificationDate}}</p></td>
-      <td class="mdl-data-table__cell--non-numeric"><p>{{trial.whyStopped}}</p></td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
+<br>
+<div class="row">
+  <div class="col-md-3" style="padding-right: 0px;">
 
+    <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Search &nbsp;<small>({{results}})</small></h2>
+      </div>
+
+      <div class="list-group">
+        {{#each-in filter as |k v|}}
+          <a class="list-group-item">
+            {{mdl-button icon='clear' click=(action 'removeFilter' k)}}
+            {{k}}
+            <i>{{truncate v 30}}</i>
+          </a>
+        {{/each-in}}
+      </div>
+
+      <div class="mdl-card__menu">
+        {{mdl-button icon='keyboard_arrow_left' click=(action 'paginate' -1)}}
+        {{page}}
+        {{mdl-button icon='keyboard_arrow_right' click=(action 'paginate' 1)}}
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-9">
+    {{#if trials.isPending}}
+      <br>
+      {{mdl-spinner}}
+    {{else}}
+      <table class="mdl-data-table  mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+          <tr>
+            <th></th>
+            {{#each keyNames as |key|}}
+              <th class="mdl-data-table__cell--non-numeric">{{key}}</th>
+            {{/each}}
+          </tr>
+        </thead>
+        <tbody>
+          {{#each trials.content as |trial|}}
+            {{table-cell data=trial keyNames=keyNames link=(action 'link') filter=(action 'filter')}}
+          {{/each}}
+        </tbody>
+      </table>
+    {{/if}}
+
+  </div>
+</div>
 {{outlet}}

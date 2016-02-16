@@ -1,0 +1,16 @@
+<td>
+{{mdl-button icon='visibility' click=(action 'link' data.id)}}
+</td>
+{{#each keyNames as |key|}}
+<td>
+<p>
+  {{#if (is-array (sub-key data key))}}
+    {{#each (sub-key data.data key) as |el|}}
+      <a class="clicky" {{action 'filter' k el}}>{{truncate el 25}}</a>,
+    {{/each}}
+  {{else}}
+    <a class="clicky" {{action 'filter' key (sub-key data.data key)}}>{{truncate (sub-key data.data key) 25}}</a>
+  {{/if}}
+</p>
+</td>
+{{/each}}
