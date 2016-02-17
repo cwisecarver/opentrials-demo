@@ -7,7 +7,7 @@ export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
     namespace: 'v1/id',
     host: ENV.jamdbURL,
     pathForType: function() {
-      return 'collections/OPENTRIALS.data/documents';
+      return `collections/${ENV.auth.self.defaultNamespace}.data/documents`;
     },
     urlForFindRecord(id, modelName, snapshot) {
       return `${ENV.jamdbURL}/v1/id/${modelName}s/${id}`;
