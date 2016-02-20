@@ -8,11 +8,6 @@ module.exports = function(environment) {
         defaultNamespace: 'OPENTRIALS',
         defaultCollection: 'users',
       },
-      // osf: {
-      //     clientId: 'db1ff76b6001460c884c33b74b2784f8',
-      //     scope: 'osf.users.all_read',
-      //     url: 'https://staging-accounts.osf.io',
-      // },
     },
     modulePrefix: 'opentrials',
     environment: environment,
@@ -32,6 +27,16 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
+  if (environment === 'staging') {
+    ENV.jamdbURL = 'https://staging-metadata.osf.io';
+    ENV.auth = {
+      self: {
+        defaultNamespace: 'opentrials',
+        defaultCollection: 'users',
+      }
+    };
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
